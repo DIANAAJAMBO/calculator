@@ -1,31 +1,16 @@
-# This config was automatically generated from your source code
-# Stacks detected: deps:node:.
-version: 2.1
-orbs:
-  node: circleci/node@5
+version: 2
 jobs:
-  test-node:
-    # Install node dependencies and run tests
-    executor: node/default
+  build:
+    docker:
+      - image: circleci/node:latest
     steps:
       - checkout
-      - node/install-packages:
-          pkg-manager: npm
+      - run: yarn install  # Or npm install
+
+      # Configure the test command
       - run:
-          name: Run tests
-          command: npm test
-  deploy:
-    # This is an example deploy job, not actually used by the workflow
-    docker:
-      - image: dianaaj/node-docker2
-    steps:
-      # Replace this with steps to deploy to users
-      - run:
-          name: deploy
-          command: '#e.g. ./deploy.sh'
-workflows:
-  build-and-test:
-    jobs:
-      - test-node
-    # - deploy:
-    #     requires:
+          name: Run Tests
+          command: |
+            yarn test
+            # Or if you use npm:
+            # npm test
