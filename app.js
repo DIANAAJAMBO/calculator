@@ -4,6 +4,7 @@ const path = require('path');
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const logger = require("./logger/logger");
+const timestamp = require("./Timestamp/Timestamps");
 
 
 // support parsing of application/json type post data
@@ -17,7 +18,7 @@ mongoose.connect('mongodb+srv://kalungirasuli495:Kalungi2002@cluster0.t9q78iv.mo
   useUnifiedTopology: true,
 })
   .then(() => {
-    console.log('Connected to MongoDB Atlas');
+    console.log('Connected to MongoDB Atlas ');
   })
   .catch((error) => {
     console.error('Error connecting to MongoDB Atlas:', error);
@@ -40,4 +41,5 @@ logger.silly("silly")
 
 
 // this should always be the last line in your server file
-app.listen(3000, () => logger.info('Listening on port 3000'));
+//this is the port that the server will listen to plus the timeline
+app.listen(3000, () => logger.info('Listening on port 3000  '+ timestamp));
