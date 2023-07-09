@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev":"nodemon"
+    "dev": "nodemon"
   },
   "author": "florence",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "mongoose": "^7.0.5",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.22",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "winston": "^3.9.0"
   }
 }
