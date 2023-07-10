@@ -32,7 +32,7 @@ function calculate(num1,operator2,num2) {
   num1 = parseFloat(document.getElementById('first').value);
   num2 = parseFloat(document.getElementById('second').value);
   operator2 = document.getElementById('operator').value;
-  // let result1= '';
+  let result1= '';
   // num1=number1
   // num2=number2
   // operator2=operator1
