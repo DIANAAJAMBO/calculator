@@ -10,6 +10,8 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing'
+        sh '''npx i npm latest
+npm test'''
       }
     }
 
