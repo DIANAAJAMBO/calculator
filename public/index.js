@@ -55,13 +55,11 @@ function calculate(num1,operator2,num2) {
       break;
     default:
       result1 = 'Invalid operator';
-      return false
+      return false;
       break;
   }
   
   document.getElementById('screen').value = result1;
-  //return used for testing purpose
+  // return used for testing purpose
   // return result1
 }
-
-module.exports = calculate;
